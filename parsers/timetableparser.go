@@ -6,7 +6,7 @@ import (
 
 type TimetableParser interface {
 	ParseV1(string) error
-	Compose() (string, error)
+	ComposeV1() (string, error)
 }
 
 func (t *Timetable) ParseV1(s string) error {
@@ -17,6 +17,10 @@ func (t *Timetable) ParseV1(s string) error {
 	return nil
 }
 
-func (t *Timetable) Compose() (string, error) {
-	return "", nil
+func (t *Timetable) ComposeV1() (string, error) {
+	res, err := json.Marshal(t)
+	if err != nil {
+		return string(res), err
+	}
+	return string(res), nil
 }

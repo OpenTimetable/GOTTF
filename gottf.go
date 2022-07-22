@@ -8,18 +8,18 @@ import (
 )
 
 func getVersionFromString(s string) string {
-	var result map[string]interface{}
+	var result parsers.TimetableVersion
 	err := json.Unmarshal([]byte(s), &result)
 	if err != nil {
 		return ""
 	}
-	return result["version"].(string)
+	return result.Version
 }
 
 func ParseTimetable(s string) (parsers.Timetable, error) {
 	version := getVersionFromString(s)
 
-	var result parsers.Timetable
+	result := parsers.Timetable{}
 	var err error
 
 	switch version {
@@ -35,7 +35,7 @@ func ParseTimetable(s string) (parsers.Timetable, error) {
 func ComposeTimetable(timetable parsers.Timetable, version string) (string, error) {
 	switch version {
 	case "1.0":
-		return timetable.Compose()
+		return timetable.ComposeV1()
 	}
 
 	return "", fmt.Errorf("unsupported timetable version: %s", version)

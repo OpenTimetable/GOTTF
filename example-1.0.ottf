@@ -1,0 +1,147 @@
+{
+	"version": "1.0",
+	"cues": {
+		"periods": {
+			"1": {
+				"from": "07.30",
+				"to": "08.15"
+			},
+			"2": {
+				"from": "08.20",
+				"to": "09.05"
+			},
+			"3": {
+				"from": "09.10",
+				"to": "09.55"
+			},
+			"4": {
+				"from": "10.00",
+				"to": "10.45"
+			},
+			"5": {
+				"from": "11.05",
+				"to": "11.50"
+			}
+		},
+		"recesses": [
+			{
+				"from": "10.45",
+				"to": "11.05"
+			}
+		]
+	},
+	"days": {
+		"2022-02-06": {
+			"classes": {
+				"1": [
+					{
+						"substitution": false,
+						"examination": true,
+						"canceled": false,
+						"name": "Maths",
+						"abbreviation": "MAT",
+						"location": "Class 23",
+						"hosts": [
+							"Joe Schmoe II."
+						]
+					},
+					{
+						"substitution": false,
+						"examination": true,
+						"canceled": true,
+						"name": "Poetry",
+						"abbreviation": "POE",
+						"location": "Class 34",
+						"hosts": [
+							"Karen Karen Junior"
+						]
+					}
+				],
+				"2": [
+					{
+						"substitution": false,
+						"examination": false,
+						"canceled": false,
+						"name": "Poetry",
+						"abbreviation": "POE",
+						"location": "Class 34",
+						"hosts": [
+							"Karen Karen Junior"
+						]
+					}
+				],
+				"3": [
+					{
+						"substitution": false,
+						"examination": false,
+						"canceled": false,
+						"name": "Chemistry",
+						"abbreviation": "CHM",
+						"location": "Lab 2",
+						"hosts": [
+							"NileRed"
+						]
+					}
+				]
+			},
+			"events": [
+				{
+					"from": "08.05",
+					"to": "08.10",
+					"title": "OEM",
+					"location": "Class 223",
+					"hosts": [
+						"Joe Shmoe",
+						"Karen Shmoe"
+					]
+				}
+			],
+			"dayevents": []
+		},
+		"2022-02-07": {
+			"classes": {
+				"1": [
+					{
+						"substitution": false,
+						"examination": false,
+						"canceled": false,
+						"name": "Computer Science",
+						"abbreviation": "CS",
+						"location": "Computer Lab 4",
+						"hosts": [
+							"Terry C. Bavis"
+						]
+					}
+				],
+				"2": [
+					{
+						"substitution": true,
+						"examination": false,
+						"canceled": true,
+						"name": "Poetry",
+						"abbreviation": "POE",
+						"location": "Class 34",
+						"hosts": [
+							"Not Karen Senior"
+						]
+					}
+				]
+			},
+			"events": [],
+			"dayevents": []
+		},
+		"2022-02-08": {
+			"classes": {},
+			"events": [],
+			"dayevents": [
+				{
+					"title": "IPO",
+					"location": "Class 124",
+					"hosts": [
+						"Alex Smith"
+					]
+				}
+			]
+		}
+	}
+}
