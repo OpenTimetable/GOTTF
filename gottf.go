@@ -8,17 +8,19 @@ import (
 )
 
 func getVersionFromString(s string) string {
-	var result parsers.TimetableVersion
+	var result map[string]interface{}
 	err := json.Unmarshal([]byte(s), &result)
 	if err != nil {
 		return ""
 	}
-	return result.Version
+
+	meta := result["metadata"].(map[string]interface{})
+
+	return meta["version"].(string)
 }
 
 func ParseTimetable(s string) (parsers.Timetable, error) {
 	version := getVersionFromString(s)
-
 	result := parsers.Timetable{}
 	var err error
 
